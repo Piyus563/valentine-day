@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine's Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Floating Hearts -->
+<div class="hearts"></div>
+
+<!-- Landing Page -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Happy Valentine's Day ❤️</h1>
+    <p>Every moment with you is special</p>
+    <button class="scroll-btn" onclick="document.querySelector('.card').scrollIntoView({behavior:'smooth'})">Explore  Story ↓</button>
+  </div>
+</section>
+
+<!-- Photo Album -->
+<section class="card">
+  <h2>Our Memories 📖</h2>
+  <div class="book">
+    <div class="book-page" id="page1">
+      <div class="page-content">
+        <img src="WhatsApp Image 2026-02-12 at 9.34.11 PM (1).jpeg" alt="Memory 1">
+        <p class="photo-caption"> ❤️</p>
+      </div>
+    </div>
+    <div class="book-page" id="page2">
+      <div class="page-content">
+        <img src="WhatsApp Image 2026-02-12 at 9.34.11 PM (2).jpeg" alt="Memory 2">
+        <p class="photo-caption"></p>
+      </div>
+    </div>
+    <div class="book-page" id="page3">
+      <div class="page-content">
+        <img src="WhatsApp Image 2026-02-12 at 9.34.11 PM (3).jpeg" alt="Memory 3">
+        <p class="photo-caption"></p>
+      </div>
+    </div>
+    <div class="book-page" id="page4">
+      <div class="page-content">
+        <img src="WhatsApp Image 2026-02-12 at 9.34.11 PM.jpeg" alt="Memory 4">
+        <p class="photo-caption"></p>
+      </div>
+    </div>
+  </div>
+  <div class="book-controls">
+    <button onclick="prevPage()">← Previous</button>
+    <span id="pageNum">Page 1 of 4</span>
+    <button onclick="nextPage()">Next →</button>
+  </div>
+</section>
+
+<!-- Music Section -->
+<section class="card">
+  <h2>Our Song 🎵</h2>
+  <audio id="music" src="Khat Navjot Ahuja (pagalall.com).mp3" loop></audio>
+  <div class="music-controls">
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn">⏸️ Pause</button>
+    <div class="volume-control">
+      <span>🔊</span>
+      <input type="range" min="0" max="1" step="0.01" value="0.7" onchange="setVolume(this.value)">
+    </div>
+  </div>
+</section>
+
+<!-- Love Message -->
+<section class="card love-letter">
+  <h2>Love Letter 💌</h2>
+  <div class="envelope-wrapper" onclick="openEnvelope()">
+    <div class="envelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body"></div>
+      <div class="heart-seal">❤️</div>
+    </div>
+    <div class="letter-paper">
+      <div class="letter-header">To My Love,</div>
+      <p id="typewriter"></p>
+      <div class="letter-signature">Forever priya 💕</div>
+    </div>
+  </div>
+  <p class="letter-hint">Click to open ✉️</p>
+</section>
+
+<!-- Surprise -->
+<section class="card surprise-section">
+  <h2>Special Surprise 🎁</h2>
+  <div class="gift-box" onclick="surprise()">
+    <div class="gift-lid"></div>
+    <div class="gift-body">
+      <div class="surprise-photo">
+        <video controls autoplay muted loop>
+          <source src="WhatsApp Video 2026-02-12 at 9.34.11 PM.mp4" type="video/mp4">
+        </video>
+        <p class="surprise-caption">💕 You & Me Forever 💕</p>
+      </div>
+    </div>
+    <div class="gift-ribbon-v"></div>
+    <div class="gift-ribbon-h"></div>
+  </div>
+  <p class="surprise-hint">Click the gift! 🎉</p>
+  <p id="surpriseText" class="surprise-message"></p>
+  <div class="confetti" id="confetti"></div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="close-btn">✕</span>
+  <img id="lightboxImg">
+  <div class="lightbox-nav">
+    <button onclick="event.stopPropagation();prevImage()">‹</button>
+    <button onclick="event.stopPropagation();nextImage()">›</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
