@@ -633,7 +633,47 @@ body{
 }
 
 @media(max-width:768px){
-  .hero h1{font-size:2.5rem;}
-  .card{padding:25px;}
-  .gallery{grid-template-columns:1fr;}
+  .hero h1{font-size:2rem;}
+  .hero p{font-size:1rem;}
+  .scroll-btn{padding:12px 25px;font-size:0.9rem;}
+  
+  .card{padding:20px;margin:20px auto;}
+  .card h2{font-size:1.5rem;}
+  
+  .book{max-width:100%;height:500px;}
+  .book-page{height:100%;}
+  .page-content{padding:20px;}
+  .page-content img{max-width:280px;}
+  .photo-caption{font-size:1rem;}
+  
+  .book-controls{flex-direction:column;gap:15px;}
+  .book-controls button{width:100%;}
+  
+  .envelope-wrapper{height:300px;max-width:100%;}
+  .envelope{height:200px;}
+  .envelope-body{height:200px;}
+  .envelope-flap{height:120px;}
+  .heart-seal{top:60px;font-size:2rem;}
+  .letter-paper{height:280px;padding:20px;font-size:0.9rem;}
+  .letter-header{font-size:1.2rem;}
+  .letter-signature{font-size:1rem;}
+  
+  .gift-box{width:120px;height:120px;}
+  .gift-body{width:120px;height:80px;}
+  .gift-lid{width:130px;height:35px;}
+  .gift-ribbon-v{width:15px;height:120px;left:52px;}
+  .gift-ribbon-h{width:120px;height:15px;top:35px;}
+  .gift-box.opened{width:280px;height:380px;}
+  .gift-box.opened .gift-body{width:280px;height:380px;}
+  .surprise-photo img,.surprise-photo video{height:280px;}
+  .surprise-caption{font-size:1rem;}
+  .surprise-message{font-size:1.2rem;}
+  
+  .music-controls{gap:15px;}
+  .volume-control{max-width:200px;}
+  
+  .lightbox-nav button{font-size:2rem;padding:5px 15px;}
+  .close-btn{top:15px;right:20px;font-size:2rem;}
+  
+  #lightbox img{max-width:95%;max-height:80vh;}
 }
