@@ -117,6 +117,7 @@ body{
   justify-content:center;
   padding:40px;
   border-left:3px solid #d4a574;
+  backface-visibility:hidden;
 }
 
 .book-page::before{
