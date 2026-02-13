@@ -1,14 +1,21 @@
 // Book Album
 let currentPage = 1;
-const totalPages = 4;
+const totalPages = 6;
 
 function updateBook(){
   for(let i = 1; i <= totalPages; i++){
     const page = document.getElementById(`page${i}`);
-    if(i < currentPage){
-      page.classList.add('turned');
-    }else{
-      page.classList.remove('turned');
+    if(page){
+      if(i < currentPage){
+        page.classList.add('turned');
+        page.style.zIndex = i;
+      }else if(i === currentPage){
+        page.classList.remove('turned');
+        page.style.zIndex = totalPages;
+      }else{
+        page.classList.remove('turned');
+        page.style.zIndex = totalPages - i;
+      }
     }
   }
   document.getElementById('pageNum').textContent = `Page ${currentPage} of ${totalPages}`;
@@ -27,6 +34,9 @@ function prevPage(){
     updateBook();
   }
 }
+
+// Initialize book on load
+window.addEventListener('load', updateBook);
 
 // Music
 const music = document.getElementById('music');
